@@ -1,0 +1,10 @@
+DS3231 Functions
+	DS3231_set(structname);
+	DS3231_get(&structname);
+	
+	Direct address read and write
+	void DS3231_set_addr(const uint8_t addr, const uint8_t val);
+	uint8_t DS3231_get_addr(const uint8_t addr);
+	
+	Temperature register
+	float DS3231_get_treg(void);
