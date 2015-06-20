@@ -1,20 +1,16 @@
-Pin out for HD44870
+Pin out for ST7920 128x64
 1 - Vss - GND
 2 - Vcc - 5V
 3 - Vee - Contrast - No use in PWMing - connect to ground for max. contrast
 4 - RS -  Register Select
 5 - RW - Read/Write - Connects to ground since we are only writing to the display
 6 - E - Enable
-7 - D0 - n/a
-8 - D1 - n/a
-9 - D2 - n/a
-10 - D3 - n/a
-11 - D4 - Data pin
-12 - D5 - Data pin
-13 - D6 - Data pin
-14 - D7 - Data pin
-15 - LED+ - Spec. 4.2V, 5V tolerant(need to check) - PWM
-16 - LED- - 
+7...14 - D0..D7 - Data pins if using parallel mode
+15 - PSB - Parallel or Serial bit - 0 for serial, 1 for parallel. We ground the pin.
+16...18 - Ignore
+19 - LED+ - Spec. 4.2V, 5V tolerant(need to check) - PWM
+20 - LED- - 
+
 
 /*
  The six Arduino "analog" pins may be used as common GPIO pins and are numbered from 14 to 19 (14 is analog pin 1, etc).
